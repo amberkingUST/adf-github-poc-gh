@@ -25,6 +25,9 @@
 					"secureInput": false
 				},
 				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "dbo.stpExecThisStuff"
+				},
 				"linkedServiceName": {
 					"referenceName": "sqlserverconnection",
 					"type": "LinkedServiceReference"
