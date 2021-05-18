@@ -1,5 +1,13 @@
 {
 	"name": "adf-g1-github-poc",
+	"properties": {
+		"globalParameters": {
+			"Environment": {
+				"type": "string",
+				"value": "QA"
+			}
+		}
+	},
 	"location": "westus",
 	"identity": {
 		"type": "SystemAssigned",
