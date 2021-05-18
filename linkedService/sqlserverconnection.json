@@ -3,8 +3,8 @@
 	"properties": {
 		"parameters": {
 			"Environment": {
-				"type": "String",
-				"defaultValue": "Dev"
+				"type": "string",
+				"defaultValue": "dev-sqlserverconnectionstring"
 			}
 		},
 		"annotations": [],
