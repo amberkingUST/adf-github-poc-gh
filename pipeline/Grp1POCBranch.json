@@ -26,7 +26,10 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "dbo.stpExecThisStuff"
+					"storedProcedureName": {
+						"value": "@pipeline().globalParameters.globalEnvironment",
+						"type": "Expression"
+					}
 				},
 				"linkedServiceName": {
 					"referenceName": "sqlserverconnection",
