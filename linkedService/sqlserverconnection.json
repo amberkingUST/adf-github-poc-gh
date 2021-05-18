@@ -1,6 +1,12 @@
 {
 	"name": "sqlserverconnection",
 	"properties": {
+		"parameters": {
+			"Environment": {
+				"type": "String",
+				"defaultValue": "Dev"
+			}
+		},
 		"annotations": [],
 		"type": "AzureSqlDatabase",
 		"typeProperties": {
@@ -10,7 +16,10 @@
 					"referenceName": "adfgithubpockv",
 					"type": "LinkedServiceReference"
 				},
-				"secretName": "dev-sqlserverconnectionstring"
+				"secretName": {
+					"value": "@linkedService().Environment",
+					"type": "Expression"
+				}
 			}
 		}
 	}
