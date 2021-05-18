@@ -1,0 +1,26 @@
+{
+	"name": "Grp1POCBranch",
+	"properties": {
+		"activities": [
+			{
+				"name": "Set variable1",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "var",
+					"value": "ab"
+				}
+			}
+		],
+		"variables": {
+			"var": {
+				"type": "String",
+				"defaultValue": "abc"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2021-05-18T00:21:58Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
