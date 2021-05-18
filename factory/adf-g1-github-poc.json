@@ -2,7 +2,7 @@
 	"name": "adf-g1-github-poc",
 	"properties": {
 		"globalParameters": {
-			"Environment": {
+			"globalEnvironment": {
 				"type": "string",
 				"value": "Dev"
 			}
