@@ -3,13 +3,29 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Set variable1",
-				"type": "SetVariable",
+				"name": "exec stored procedure",
+				"type": "SqlServerStoredProcedure",
 				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": true,
+					"secureInput": true
+				},
 				"userProperties": [],
 				"typeProperties": {
-					"variableName": "var",
-					"value": "ab"
+					"storedProcedureName": {
+						"value": "@variables('var')",
+						"type": "Expression"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "sqlserverconnection",
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"Environment": "dev-sqlserverconnectionstring"
+					}
 				}
 			}
 		],

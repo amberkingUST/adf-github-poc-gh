@@ -1,0 +1,26 @@
+{
+	"name": "sqlserverconnection",
+	"properties": {
+		"parameters": {
+			"Environment": {
+				"type": "string",
+				"defaultValue": "dev-sqlserverconnectionstring"
+			}
+		},
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"connectionString": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "adfgithubpockv",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": {
+					"value": "@linkedService().Environment",
+					"type": "Expression"
+				}
+			}
+		}
+	}
+}

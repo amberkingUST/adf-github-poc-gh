@@ -1,0 +1,12 @@
+{
+	"name": "SharedIntegratedRuntime",
+	"properties": {
+		"type": "SelfHosted",
+		"typeProperties": {
+			"linkedInfo": {
+				"resourceId": "/subscriptions/143e771e-4a87-4995-9ee6-605c8aa2c7be/resourcegroups/rg-hbi-training/providers/Microsoft.DataFactory/factories/adf-hbi-training/integrationruntimes/SelfHosted-IntegrationRuntime",
+				"authorizationType": "Rbac"
+			}
+		}
+	}
+}
