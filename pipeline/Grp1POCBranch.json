@@ -22,7 +22,10 @@
 				},
 				"linkedServiceName": {
 					"referenceName": "sqlserverconnection",
-					"type": "LinkedServiceReference"
+					"type": "LinkedServiceReference",
+					"parameters": {
+						"Environment": "dev-sqlserverconnectionstring"
+					}
 				}
 			}
 		],
