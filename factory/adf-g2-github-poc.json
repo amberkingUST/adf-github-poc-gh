@@ -1,0 +1,9 @@
+{
+	"name": "adf-g2-github-poc",
+	"location": "westus2",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "72d88b66-990e-4a6c-804b-c73372c67748",
+		"tenantId": "3352c4d0-33e5-4899-9d84-1ca608f6b031"
+	}
+}
