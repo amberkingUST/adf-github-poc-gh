@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "adf-g2-github-poc"
+		},
+		"adfgithubpockv_properties_typeProperties_baseUrl": {
+			"value": "https://adf-github-poc-kv.vault.azure.net/"
+		},
+		"sqlserverconnection_properties_typeProperties_connectionString_secretName": {
+			"value": "@linkedService().Environment"
+		},
+		"SharedIntegratedRuntime_properties_typeProperties_linkedInfo_resourceId": {
+			"value": "/subscriptions/143e771e-4a87-4995-9ee6-605c8aa2c7be/resourcegroups/rg-hbi-training/providers/Microsoft.DataFactory/factories/adf-hbi-training/integrationruntimes/SelfHosted-IntegrationRuntime"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
