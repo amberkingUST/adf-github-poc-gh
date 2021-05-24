@@ -1,5 +1,13 @@
 {
 	"name": "adf-g2-github-poc",
+	"properties": {
+		"globalParameters": {
+			"EnvironmentGP": {
+				"type": "string",
+				"value": "QA"
+			}
+		}
+	},
 	"location": "westus2",
 	"identity": {
 		"type": "SystemAssigned",
