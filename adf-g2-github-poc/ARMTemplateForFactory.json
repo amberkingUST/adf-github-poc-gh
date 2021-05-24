@@ -32,6 +32,7 @@
 				"activities": [
 					{
 						"name": "exec stored procedure",
+						"description": "abc",
 						"type": "SqlServerStoredProcedure",
 						"dependsOn": [],
 						"policy": {
