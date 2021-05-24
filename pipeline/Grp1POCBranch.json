@@ -24,7 +24,10 @@
 					"referenceName": "sqlserverconnection",
 					"type": "LinkedServiceReference",
 					"parameters": {
-						"Environment": "dev-sqlserverconnectionstring"
+						"Environment": {
+							"value": "@concat(pipeline().globalParameters.globalEnvironment,'sqlserverconnectionstring')",
+							"type": "Expression"
+						}
 					}
 				}
 			}
