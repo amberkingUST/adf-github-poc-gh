@@ -25,7 +25,7 @@
 					"type": "LinkedServiceReference",
 					"parameters": {
 						"Environment": {
-							"value": "@concat(pipeline().globalParameters.globalEnvironment,'sqlserverconnectionstring')",
+							"value": "@concat(pipeline().globalParameters.EnvironmentGP,'sqlserverconnectionstring')",
 							"type": "Expression"
 						}
 					}
