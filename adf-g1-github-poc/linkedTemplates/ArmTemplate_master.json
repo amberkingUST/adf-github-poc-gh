@@ -1,0 +1,63 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "adf-g1-github-poc"
+		},
+		"adfgithubpockv_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://adf-github-poc-kv.vault.azure.net/"
+		},
+		"sqlserverconnection_properties_typeProperties_connectionString_secretName": {
+			"type": "string",
+			"defaultValue": "@linkedService().Environment"
+		},
+		"SharedIntegratedRuntime_properties_typeProperties_linkedInfo_resourceId": {
+			"type": "string",
+			"defaultValue": "/subscriptions/143e771e-4a87-4995-9ee6-605c8aa2c7be/resourcegroups/rg-hbi-training/providers/Microsoft.DataFactory/factories/adf-hbi-training/integrationruntimes/SelfHosted-IntegrationRuntime"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "adf-g1-github-poc_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"adfgithubpockv_properties_typeProperties_baseUrl": {
+						"value": "[parameters('adfgithubpockv_properties_typeProperties_baseUrl')]"
+					},
+					"SharedIntegratedRuntime_properties_typeProperties_linkedInfo_resourceId": {
+						"value": "[parameters('SharedIntegratedRuntime_properties_typeProperties_linkedInfo_resourceId')]"
+					},
+					"sqlserverconnection_properties_typeProperties_connectionString_secretName": {
+						"value": "[parameters('sqlserverconnection_properties_typeProperties_connectionString_secretName')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
